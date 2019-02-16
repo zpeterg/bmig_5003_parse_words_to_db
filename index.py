@@ -10,8 +10,10 @@ from getStats import getStats
 
 def getAndFilter(options):
     f = Filter(options)
-    these_words = getFile(options['file'], f.filter)
-    return these_words
+    rtn = []
+    for file in options['files']:
+        rtn += getFile(file, f.filter)
+    return rtn
 
 def run(args):
     options = dealArgs(args).to_object()

@@ -1,5 +1,5 @@
-# bmig_5003_count_words
-A command-line script by Peter Granderson that loads a file and splits/filters it by word, counts those words, and then outputs to screen, or to JSON or CSV file.
+# bmig_5003_multifile_parse
+A command-line script by Peter Granderson that loads one or more files, splits/filters them by word, counts those words, and then outputs to screen, or to JSON or CSV file.
 
 # Install
 ```git clone https://github.com/zpeterg/bmig5003_split_to_words```

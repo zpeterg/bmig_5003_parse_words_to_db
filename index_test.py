@@ -11,7 +11,7 @@ class IndexTest(unittest.TestCase):
     def test_speed_with_moby(self):
         t0 = time()
         options = {
-            'file': 'moby_test.txt',
+            'files': ['moby_test.txt'],
             'start': 'whale',
             'stop': 'mast',
             'finish': 'ffff9999',
@@ -23,7 +23,7 @@ class IndexTest(unittest.TestCase):
 
     def test_get_and_filter_simple(self):
         options = {
-            'file': 'small_test.txt',
+            'files': ['small_test.txt'],
             'start': 'foo',
             'stop': 'bar',
             'finish': 'enough',
@@ -52,6 +52,21 @@ class IndexTest(unittest.TestCase):
             f'--output={file_name}',
         ])
         res = '{\n    "cow": 2,\n    "siamese": 1,\n    "wonderland": 1,\n    "foo": 1,\n    "toothpaste": 1,\n    "milky": 1,\n    "flight-manual": 1,\n    "toothpick": 1\n}'
+        with open(file_name, 'r') as file:
+            contents = file.read()
+            self.assertEqual(res, contents)
+
+    def test_index_run_multi(self):
+        run([
+            '',
+            '--inputs=small_test_list.txt',
+            '--start=foo',
+            '--stop=bar',
+            '--finish=007',
+            '-s',
+            f'--output={file_name}',
+        ])
+        res = '{\n    "cow": 2,\n    "siamese": 1,\n    "wonderland": 1,\n    "foo": 1,\n    "toothpaste": 1,\n    "milky": 1,\n    "flight-manual": 1,\n    "toothpick": 1,\n    "cotton": 1,\n    "ceiling": 1,\n    "formaldehyde": 1\n}'
         with open(file_name, 'r') as file:
             contents = file.read()
             self.assertEqual(res, contents)

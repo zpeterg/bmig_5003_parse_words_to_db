@@ -1,3 +1,4 @@
+from getFile import getFile
 
 class dealArgs:
     def __init__(self, args):
@@ -12,7 +13,11 @@ class dealArgs:
         for a in args:
             a = a.split('=')
             if a[0] == '--input':
-                self.file = a[1]
+                # If one input go ahead with that
+                self.files = [a[1]]
+            elif a[0] == '--inputs':
+                # If multiple inputs, go ahead and get them
+                self.files = getFile(a[1], lambda x: x.strip())
             elif a[0] == '--start':
                 self.start = a[1]
             elif a[0] == '--stop':
@@ -22,9 +27,9 @@ class dealArgs:
             elif a[0] == '--output':
                 self.output = a[1]
 
-        # throw error if no input file supplied
-        if not hasattr(self, 'file'):
-            raise ValueError('You must supply a file with --input')
+        # throw error if no input files supplied
+        if not hasattr(self, 'files') or len(self.files) <= 0:
+            raise ValueError('You must supply a file with --input or a list of space-separated files with --inputs')
 
         if '-s' in args:
             self.stats = True
@@ -36,15 +41,15 @@ class dealArgs:
 
     # FILE
     @property
-    def file(self):
-        return self.__file
+    def files(self):
+        return self.__files
 
-    @file.setter
-    def file(self, file):
-        if file == '':
-            raise ValueError('You must supply a file')
+    @files.setter
+    def files(self, files):
+        if files == '':
+            raise ValueError('You must supply files')
 
-        self.__file = file
+        self.__files = files
 
     # OUTPUT
     @property
@@ -103,7 +108,7 @@ class dealArgs:
 
     def to_object(self):
         return {
-            "file": self.file,
+            "files": self.files,
             "start": self.start,
             "stop": self.stop,
             "finish": self.finish,

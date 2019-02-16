@@ -16,7 +16,7 @@ args = [
 class UtilsTest(unittest.TestCase):
     def test_deal_args(self):
         res = {
-            'file': 'small_test.txt',
+            'files': ['small_test.txt'],
             'start': 'foo',
             'stop': 'bar',
             'finish': 'enough',
@@ -28,6 +28,19 @@ class UtilsTest(unittest.TestCase):
         }
         options = dealArgs(args)
         self.assertEqual(res, options.to_object())
+
+    def test_multi_file(self):
+        res = {
+            'file': ['small_test.txt', 'small_test2.txt'],
+            'start': 'foo',
+            'stop': 'bar',
+            'finish': 'enough',
+            'format': False,
+            'output': 'output.json',
+            # stats overrides format
+            'stats': True,
+            'csv': False,
+        }
 
     def test_change_format(self):
         options = dealArgs(args)
@@ -41,8 +54,8 @@ class UtilsTest(unittest.TestCase):
 
     def test_change_file(self):
         options = dealArgs(args)
-        options.file = 'foo.txt'
-        self.assertEqual('foo.txt', options.file)
+        options.files = ['foo.txt']
+        self.assertEqual(['foo.txt'], options.files)
 
     def test_change_output_override(self):
         options = dealArgs(args)
