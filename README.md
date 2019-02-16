@@ -5,7 +5,7 @@ A command-line script by Peter Granderson that loads one or more files, splits/f
 ```git clone https://github.com/zpeterg/bmig5003_split_to_words```
 
 # Run
-1. ```cd bmig5003_split_to_words```
+1. cd into the directory
 2. ```python
     python index.py \
         --input=<filename> \
@@ -23,13 +23,31 @@ A command-line script by Peter Granderson that loads one or more files, splits/f
 To get words in columns:
 ```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough -f```
 
+To get words and output to JSON file:
+```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough --output=deleteme.json```
+
 To get words with frequency-counts output to JSON file:
 ```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough --output=deleteme.json -s```
 
 To get words with frequency-counts output to CSV file:
 ```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough --output=deleteme.csv -s -c```
 
-You may also add new files at the root and change the -file, -start, -stop, -finish above. 
+# Merge
+1. cd into the directory
+2. ```python
+    python merge.py \
+        --inputs=<filename> \
+        <optional: "--input" in place of "--inputs" for single-file recall>
+        --output=<filename> \
+        <optional: "-c" for outputting to csv>
+     ```
+
+## Examples of Merge
+To merge two files (listed separated by spaces in small_output_list.txt) and output to JSON:
+```python merge.py --inputs=test_output_list.txt --output=deleteme.json```
+
+To convert one file from JSON to CSV:
+```python merge.py --input=test_output_array.json --output=deleteme.csv -c```
 
 # Run Unit Tests
 ```python -m unittest discover -p '*test*.py'```

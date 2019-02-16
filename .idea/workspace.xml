@@ -2,43 +2,32 @@
 <project version="4">
   <component name="AutoTestManager">
     <enabled-run-configurations>
-      <run-configuration type="tests" name="Unittests for getFile_test.GetFileTest" />
-      <run-configuration type="tests" name="Unittests for utils_test.UtilsTest" />
-      <run-configuration type="tests" name="Unittests for index_test.GetAndFilterTest.test_index_run" />
-      <run-configuration type="tests" name="Unittests for writeFile_test.WriteFileTest" />
-      <run-configuration type="tests" name="Unittests for filter_test.WalkArrayTest.test_constructor" />
-      <run-configuration type="tests" name="Unittests for utils_test.UtilsTest.test_change_file_override" />
-      <run-configuration type="tests" name="Unittests for writeFile_test.WriteFileTest.test_csv_dict_write" />
-      <run-configuration type="tests" name="Unittests for cleanWords_test.FormatTest" />
-      <run-configuration type="tests" name="Unittests for utils_test.UtilsTest.test_clean_word" />
-      <run-configuration type="tests" name="Unittests for index_test.GetAndFilterTest.test_get_and_filter_simple" />
-      <run-configuration type="tests" name="Unittests for writeFile_test.WriteFileTest.test_csv_write" />
+      <run-configuration type="tests" name="Unittests for merge_test.MergeTest.test_check_same" />
       <run-configuration type="tests" name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" />
-      <run-configuration type="tests" name="Unittests for index_test.GetAndFilterTest" />
       <run-configuration type="tests" name="Unittests for filter_test.FilterTest.test_filter_finish_same_as_stop" />
-      <run-configuration type="tests" name="Unittests for getFile_test.GetFileTest.test_getFile_basic" />
-      <run-configuration type="tests" name="Unittests for filter_test.WalkArrayTest.test_filter_simple" />
-      <run-configuration type="tests" name="Unittests for filter_test.WalkArrayTest.test_filter_sudden_stop" />
-      <run-configuration type="tests" name="Unittests for utils_test.UtilsTest.test_deal_args" />
-      <run-configuration type="tests" name="Unittests for getStates_test.GetStatsTest" />
-      <run-configuration type="tests" name="Unittests for filter_test.WalkArrayTest" />
-      <run-configuration type="tests" name="Unittests for utils_test.UtilsTest" />
-      <run-configuration type="tests" name="Unittests for utils_test.UtilsTest.test_deal_no_args" />
-      <run-configuration type="tests" name="Unittests for utils_test.UtilsTest.test_deal_args" />
-      <run-configuration type="tests" name="Unittests for filter_test.WalkArrayTest.test_filter_run_out" />
-      <run-configuration type="tests" name="Unittests for filter_test.WalkArrayTest.test_filter_simple" />
+      <run-configuration type="tests" name="Unittests for index_test.GetAndFilterTest.test_index_run" />
+      <run-configuration type="tests" name="Unittests for merge_test.MergeTest.test_check_same_fail" />
+      <run-configuration type="tests" name="Unittests for merge_test.MergeTest.test_transform_single_file_to_csv" />
+      <run-configuration type="tests" name="Unittests for getJSON_test.GetFileTest" />
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57b1a781-d217-4517-95d7-cf2b92f36681" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/small_test2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/small_test_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/getJSON.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/getJSON_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/merge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/merge_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_output2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_output_array.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_output_array2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_output_array_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_output_list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/index_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writeFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/writeFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writeFile_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/writeFile_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +46,15 @@
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_filter_test_WalkArrayTest_test_filter_simple.coverage" NAME="Unittests for filter_test.WalkArrayTest.test_filter_simple Coverage Results" MODIFIED="1549667373257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_format_test_FormatTest.coverage" NAME="Unittests for format_test.FormatTest Coverage Results" MODIFIED="1549668858338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_getFile_test_GetFileTest_test_getFile_basic.coverage" NAME="Unittests for getFile_test.GetFileTest.test_getFile_basic Coverage Results" MODIFIED="1549667219323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmig_5003_multifile_parse$Unittests_for_getJSON_test_GetFileTest_test_getFile_basic.coverage" NAME="Unittests for getJSON_test.GetFileTest.test_getFile_basic Coverage Results" MODIFIED="1550336987330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_index_test_GetAndFilterTest_test_args_print.coverage" NAME="Unittests for index_test.GetAndFilterTest.test_args_print Coverage Results" MODIFIED="1549657802358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_getStates_test_GetStatsTest.coverage" NAME="Unittests for getStates_test.GetStatsTest Coverage Results" MODIFIED="1549664035035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmig_5003_multifile_parse$Unittests_for_getJSON_test_GetFileTest.coverage" NAME="Unittests for getJSON_test.GetFileTest Coverage Results" MODIFIED="1550337678722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_utils_test_UtilsTest_test_change_file.coverage" NAME="Unittests for utils_test.UtilsTest.test_change_file Coverage Results" MODIFIED="1549732147145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmig_5003_multifile_parse$Unittests_for_merge_test_MergeTest_test_transform_single_file_to_csv.coverage" NAME="Unittests for merge_test.MergeTest.test_transform_single_file_to_csv Coverage Results" MODIFIED="1550342342783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_filter_test_WalkArrayTest_test_constructor.coverage" NAME="Unittests for filter_test.WalkArrayTest.test_constructor Coverage Results" MODIFIED="1549656809936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_index_test_GetAndFilterTest_test_index_run.coverage" NAME="Unittests for index_test.GetAndFilterTest.test_index_run Coverage Results" MODIFIED="1549747861106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmig_5003_multifile_parse$Unittests_for_merge_test_MergeTest.coverage" NAME="Unittests for merge_test.MergeTest Coverage Results" MODIFIED="1550342789609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_index_test_GetAndFilterTest_test_get_and_filter_simple.coverage" NAME="Unittests for index_test.GetAndFilterTest.test_get_and_filter_simple Coverage Results" MODIFIED="1549657857354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_utils_test_UtilsTest_test_change_file_override.coverage" NAME="Unittests for utils_test.UtilsTest.test_change_file_override Coverage Results" MODIFIED="1549732232230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_filter_test_FilterTest_test_filter_finish_same_as_stop.coverage" NAME="Unittests for filter_test.FilterTest.test_filter_finish_same_as_stop Coverage Results" MODIFIED="1549747246485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -69,6 +62,7 @@
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_utils_test_UtilsTest.coverage" NAME="Unittests for utils_test.UtilsTest Coverage Results" MODIFIED="1549733076538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_index_test_GetAndFilterTest_test_index_run_csv.coverage" NAME="Unittests for index_test.GetAndFilterTest.test_index_run_csv Coverage Results" MODIFIED="1549748886213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_index_test_GetAndFilterTest.coverage" NAME="Unittests for index_test.GetAndFilterTest Coverage Results" MODIFIED="1549660216156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmig_5003_multifile_parse$Unittests_for_merge_test_MergeTest_test_check_same.coverage" NAME="Unittests for merge_test.MergeTest.test_check_same Coverage Results" MODIFIED="1550337903928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_getFile_test_GetFileTest.coverage" NAME="Unittests for getFile_test.GetFileTest Coverage Results" MODIFIED="1549656747475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_utils_test_UtilsTest_test_deal_no_args.coverage" NAME="Unittests for utils_test.UtilsTest.test_deal_no_args Coverage Results" MODIFIED="1549666322662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_filter_test_WalkArrayTest.coverage" NAME="Unittests for filter_test.WalkArrayTest Coverage Results" MODIFIED="1549668848326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -76,6 +70,7 @@
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_filter_test_FilterTest.coverage" NAME="Unittests for filter_test.FilterTest Coverage Results" MODIFIED="1549734864463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_utils_test_UtilsTest_test_change_csv_override.coverage" NAME="Unittests for utils_test.UtilsTest.test_change_csv_override Coverage Results" MODIFIED="1549734702786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bmig_5003_count_words$Unittests_for_utils_test_UtilsTest_test_deal_args_output_override.coverage" NAME="Unittests for utils_test.UtilsTest.test_deal_args_output_override Coverage Results" MODIFIED="1549660648810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bmig_5003_multifile_parse$Unittests_for_merge_test_MergeTest_test_check_same_fail.coverage" NAME="Unittests for merge_test.MergeTest.test_check_same_fail Coverage Results" MODIFIED="1550337771172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="bmig_5003_count_words" />
@@ -83,10 +78,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index_test.py">
+        <entry file="file://$PROJECT_DIR$/merge_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
-              <caret line="68" column="172" selection-start-line="68" selection-start-column="172" selection-end-line="68" selection-end-column="172" />
+            <state relative-caret-position="766">
+              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -116,6 +111,9 @@
       <find>file</find>
       <find>test_deal_args</find>
       <find>test_get_and</find>
+      <find>exception</find>
+      <find>test_output2</find>
+      <find>test_output_list.txt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,17 +133,25 @@
         <option value="$PROJECT_DIR$/filter_test.py" />
         <option value="$PROJECT_DIR$/small_test.txt" />
         <option value="$PROJECT_DIR$/getFile_test.py" />
-        <option value="$PROJECT_DIR$/writeFile.py" />
-        <option value="$PROJECT_DIR$/writeFile_test.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/getFileContents.py" />
         <option value="$PROJECT_DIR$/small_test_list.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/index.py" />
         <option value="$PROJECT_DIR$/utils_test.py" />
         <option value="$PROJECT_DIR$/small_test2.txt" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/index_test.py" />
+        <option value="$PROJECT_DIR$/getJSON.py" />
+        <option value="$PROJECT_DIR$/getJSON_test.py" />
+        <option value="$PROJECT_DIR$/test_output_list.txt" />
+        <option value="$PROJECT_DIR$/index.py" />
+        <option value="$PROJECT_DIR$/test_output_array_list.txt" />
+        <option value="$PROJECT_DIR$/writeFile_test.py" />
+        <option value="$PROJECT_DIR$/writeFile.py" />
+        <option value="$PROJECT_DIR$/merge.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/test_output2.json" />
+        <option value="$PROJECT_DIR$/test_output_array2.json" />
+        <option value="$PROJECT_DIR$/merge_test.py" />
       </list>
     </option>
   </component>
@@ -191,8 +197,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for index_test.GetAndFilterTest.test_index_run_csv">
-    <configuration name="Unittests for filter_test.FilterTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for merge_test.MergeTest">
+    <configuration name="Unittests for getJSON_test.GetFileTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="bmig_5003_count_words" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -203,11 +209,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;filter_test.FilterTest&quot;" />
+      <option name="_new_target" value="&quot;getJSON_test.GetFileTest&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for filter_test.FilterTest.test_filter_finish_same_as_stop" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for merge_test.MergeTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="bmig_5003_count_words" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -218,11 +224,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;filter_test.FilterTest.test_filter_finish_same_as_stop&quot;" />
+      <option name="_new_target" value="&quot;merge_test.MergeTest&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for merge_test.MergeTest.test_check_same" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="bmig_5003_count_words" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -233,11 +239,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;index_test.GetAndFilterTest.test_index_run&quot;" />
+      <option name="_new_target" value="&quot;merge_test.MergeTest.test_check_same&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for merge_test.MergeTest.test_check_same_fail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="bmig_5003_count_words" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,11 +254,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;index_test.GetAndFilterTest.test_index_run_csv&quot;" />
+      <option name="_new_target" value="&quot;merge_test.MergeTest.test_check_same_fail&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for utils_test.UtilsTest.test_change_csv_override" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for merge_test.MergeTest.test_transform_single_file_to_csv" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="bmig_5003_count_words" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,17 +269,17 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;utils_test.UtilsTest.test_change_csv_override&quot;" />
+      <option name="_new_target" value="&quot;merge_test.MergeTest.test_transform_single_file_to_csv&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for index_test.GetAndFilterTest.test_index_run_csv" />
-        <item itemvalue="Python tests.Unittests for index_test.GetAndFilterTest.test_index_run" />
-        <item itemvalue="Python tests.Unittests for filter_test.FilterTest.test_filter_finish_same_as_stop" />
-        <item itemvalue="Python tests.Unittests for filter_test.FilterTest" />
-        <item itemvalue="Python tests.Unittests for utils_test.UtilsTest.test_change_csv_override" />
+        <item itemvalue="Python tests.Unittests for merge_test.MergeTest" />
+        <item itemvalue="Python tests.Unittests for merge_test.MergeTest.test_transform_single_file_to_csv" />
+        <item itemvalue="Python tests.Unittests for merge_test.MergeTest.test_check_same" />
+        <item itemvalue="Python tests.Unittests for merge_test.MergeTest.test_check_same_fail" />
+        <item itemvalue="Python tests.Unittests for getJSON_test.GetFileTest" />
       </list>
     </recent_temporary>
   </component>
@@ -288,7 +294,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549511012030</updated>
       <workItem from="1549511013438" duration="29158000" />
-      <workItem from="1550333522435" duration="1973000" />
+      <workItem from="1550333522435" duration="10322000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1549512664772</created>
@@ -346,55 +352,62 @@
       <option name="project" value="LOCAL" />
       <updated>1550333681572</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add multi-file read">
+      <created>1550335516541</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550335516541</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 40m 08s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 43m 04s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 40m 38s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 43m 24s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 41m 00s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 43m 31s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 41m 09s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 43m 36s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 41m 20s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 43m 42s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 41m 30s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 43m 50s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 41m 58s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 44m 46s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 42m 55s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 45m 00s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 47m 57s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 45m 39s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_index_test_GetAndFilterTest_test_index_run_csv - 2019.02.09 at 15h 48m 06s.xml">
-      <configuration name="Unittests for index_test.GetAndFilterTest.test_index_run_csv" configurationId="tests" />
+    <history-entry file="Unittests_for_merge_test_MergeTest - 2019.02.16 at 12h 46m 29s.xml">
+      <configuration name="Unittests for merge_test.MergeTest" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31131000" />
+    <option name="totallyTimeSpent" value="39480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2208" height="1208" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23302326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14883721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32997987" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286908" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40311173" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33611885" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39925718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -422,7 +435,8 @@
     <MESSAGE value="add csv output &amp; tests on index" />
     <MESSAGE value="readme update" />
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="add multi-file read" />
+    <option name="LAST_COMMIT_MESSAGE" value="add multi-file read" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/format.py">
@@ -484,18 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getFile_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deleteme.json" />
-    <entry file="file://$PROJECT_DIR$/deleteme.csv" />
     <entry file="file://$PROJECT_DIR$/.json" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -532,50 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="1" column="167" selection-start-line="1" selection-start-column="167" selection-end-line="1" selection-end-column="167" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writeFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writeFile_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/small_test2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -596,14 +554,150 @@
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+          <caret line="19" column="63" lean-forward="true" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getJSON_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getFile_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="38" selection-start-line="38" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getJSON.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_output.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_output_array_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deleteme.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_output_array.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="68" column="172" selection-start-line="68" selection-start-column="172" selection-end-line="68" selection-end-column="172" />
+        <state relative-caret-position="510">
+          <caret line="93" column="38" lean-forward="true" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writeFile_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writeFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="833">
+            <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="74" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_output2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_output_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_output_array2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/merge_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

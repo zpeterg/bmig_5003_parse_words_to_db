@@ -15,12 +15,21 @@ class WriteFileTest(unittest.TestCase):
             self.assertEqual(content, file.read())
 
     def test_csv_write(self):
-        csv_content = [['name', 'type'], ['cow', 'mammal']]
+        columns = ['name', 'type']
+        csv_content = [['cow', 'mammal']]
         res = 'name,type\ncow,mammal\n'
-        writeCSV(csv_content, file_name)
+        writeCSV(csv_content, file_name, columns)
         with open(file_name, 'r') as file:
             # append each line with a space
 
+            self.assertEqual(res, file.read())
+
+    def test_csv_write_single_column(self):
+        columns = ['name']
+        csv_content = ['cow', 'dog']
+        res = 'name\ncow\ndog\n'
+        writeCSV(csv_content, file_name, columns)
+        with open(file_name, 'r') as file:
             self.assertEqual(res, file.read())
 
     def test_csv_dict_write(self):

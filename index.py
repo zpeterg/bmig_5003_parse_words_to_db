@@ -35,7 +35,6 @@ def run(args):
             if stats:
                 columns = ['Name', 'Count']
             writeCSV(stats, options['output'], columns)
-
         # Not CSV
         else:
             if stats:
