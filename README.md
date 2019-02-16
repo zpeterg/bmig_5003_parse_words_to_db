@@ -37,7 +37,7 @@ To get words with frequency-counts output to CSV file:
 2. ```python
     python merge.py \
         --inputs=<filename> \
-        <optional: "--input" in place of "--inputs" for single-file recall>
+        <optional: "--input" in place of "--inputs" for single-file transformation>
         --output=<filename> \
         <optional: "-c" for outputting to csv>
      ```
