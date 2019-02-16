@@ -12,22 +12,9 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57b1a781-d217-4517-95d7-cf2b92f36681" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/getJSON.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/getJSON_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/merge_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_output.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_output2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_output_array.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_output_array2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_output_array_list.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_output_list.txt" afterDir="false" />
+    <list default="true" id="57b1a781-d217-4517-95d7-cf2b92f36681" name="Default Changelist" comment="fix install on readme`">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/writeFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/writeFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/writeFile_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/writeFile_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,13 +65,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/merge_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="766">
-              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="68">
+                <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -148,10 +135,10 @@
         <option value="$PROJECT_DIR$/writeFile_test.py" />
         <option value="$PROJECT_DIR$/writeFile.py" />
         <option value="$PROJECT_DIR$/merge.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test_output2.json" />
         <option value="$PROJECT_DIR$/test_output_array2.json" />
         <option value="$PROJECT_DIR$/merge_test.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -294,7 +281,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549511012030</updated>
       <workItem from="1549511013438" duration="29158000" />
-      <workItem from="1550333522435" duration="10322000" />
+      <workItem from="1550333522435" duration="10707000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1549512664772</created>
@@ -359,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550335516541</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="readme tweak">
+      <created>1550344093148</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550344093148</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -395,7 +389,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39480000" />
+    <option name="totallyTimeSpent" value="39865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2208" height="1208" extended-state="6" />
@@ -436,7 +430,8 @@
     <MESSAGE value="readme update" />
     <MESSAGE value="initial" />
     <MESSAGE value="add multi-file read" />
-    <option name="LAST_COMMIT_MESSAGE" value="add multi-file read" />
+    <MESSAGE value="readme tweak" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme tweak" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/format.py">
@@ -663,16 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="833">
-            <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="74" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_output2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -701,6 +686,16 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

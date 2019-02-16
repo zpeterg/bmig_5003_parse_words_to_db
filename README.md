@@ -2,7 +2,7 @@
 A command-line script by Peter Granderson that loads one or more files, splits/filters them by word, counts those words, and then outputs to screen, or to JSON or CSV file.
 
 # Install
-```git clone https://github.com/zpeterg/bmig5003_split_to_words```
+```git clone git@github.com:zpeterg/bmig_5003_multifile_parse```
 
 # Run
 1. cd into the directory
@@ -37,7 +37,7 @@ To get words with frequency-counts output to CSV file:
 2. ```python
     python merge.py \
         --inputs=<filename> \
-        <optional: "--input" in place of "--inputs" for single-file transformation>
+        <optional: "--input" in place of "--inputs" for single-file transformation> \
         --output=<filename> \
         <optional: "-c" for outputting to csv>
      ```
