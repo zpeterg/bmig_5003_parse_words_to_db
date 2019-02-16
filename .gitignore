@@ -1,3 +1,4 @@
-pycache/
+/pycache/
+/__pycache__/
 .git/
 /deleteme*
