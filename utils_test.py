@@ -7,9 +7,7 @@ args = [
     '--start=foo',
     '--stop=bar',
     '--finish=enough',
-    '--output=output',
-    '-s',
-    '-f',
+    '-c',
 ]
 
 
@@ -20,11 +18,7 @@ class UtilsTest(unittest.TestCase):
             'start': 'foo',
             'stop': 'bar',
             'finish': 'enough',
-            'format': False,
-            'output': 'output.json',
-            # stats overrides format
-            'stats': True,
-            'csv': False,
+            'clear': True,
         }
         options = dealArgs(args)
         self.assertEqual(res, options.to_object())
@@ -35,49 +29,18 @@ class UtilsTest(unittest.TestCase):
             'start': 'foo',
             'stop': 'bar',
             'finish': 'enough',
-            'format': False,
-            'output': 'output.json',
-            # stats overrides format
-            'stats': True,
-            'csv': False,
+            'clear': True,
         }
-
-    def test_change_format(self):
-        options = dealArgs(args)
-        options.format = True
-        self.assertEqual(True, options.format)
-
-    def test_change_format_override(self):
-        options = dealArgs(args)
-        options.format = 'foo'
-        self.assertEqual(False, options.format)
 
     def test_change_file(self):
         options = dealArgs(args)
         options.files = ['foo.txt']
         self.assertEqual(['foo.txt'], options.files)
 
-    def test_change_output_override(self):
+    def test_change_clear(self):
         options = dealArgs(args)
-        options.output = 'foo'
-        self.assertEqual('foo.json', options.output)
-
-    def test_change_csv_override(self):
-        options = dealArgs(args)
-        options.csv = True
-        self.assertEqual(True, options.csv)
-        self.assertEqual(False, options.format)
-
-    def test_change_stats(self):
-        options = dealArgs(args)
-        options.stats = True
-        self.assertEqual(True, options.stats)
-        self.assertEqual(False, options.format)
-
-    def test_change_stats_override(self):
-        options = dealArgs(args)
-        options.stats = 'foo'
-        self.assertEqual(False, options.stats)
+        options.clear = True
+        self.assertEqual(True, options.clear)
 
     def test_deal_no_args(self):
         self.assertRaises(ValueError, dealArgs, [])

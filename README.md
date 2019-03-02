@@ -1,5 +1,6 @@
 # bmig_5003_multifile_parse
-A command-line script by Peter Granderson that loads one or more files, splits/filters them by word, counts those words, and then outputs to screen, or to JSON or CSV file.
+A command-line script by Peter Granderson that loads one or more files, splits/filters them by word and saves them to a SQLite database.
+A separate script allows the count of a particular word to be outputed to standard-out.
 
 # Install
 ```git clone git@github.com:zpeterg/bmig_5003_multifile_parse```
@@ -13,41 +14,27 @@ A command-line script by Peter Granderson that loads one or more files, splits/f
         --start=<start word> \
         --stop=<stop word> \
         --finish=<finish word> \
-        <optional: "--output=<filename>" for outputting to file - is automatically appended with correct fileending> \
-        <optional: "-s" for outputting stats (count of words)>
-        <optional: "-f" for formating into columns - only for print-to-screen>
-        <optional: "-c" for outputting to csv - only for output to file>
+        <optional: "-c" for clearing database prior to run>
+     ```
+## Examples
+To record words to database:
+```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough -c```
+
+To add another set, this time from a list of inputs:
+```python index.py --inputs=small_test_list.txt --start=foo --stop=bar --finish=enough```
+
+# Read
+1. ```python
+    python read.py \
+        <optional: the name of the word you want to obtain a count about>
      ```
 
 ## Examples
-To get words in columns:
-```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough -f```
+Read the count of a particular word from the database:
+```python read.py cow```
 
-To get words and output to JSON file:
-```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough --output=deleteme.json```
-
-To get words with frequency-counts output to JSON file:
-```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough --output=deleteme.json -s```
-
-To get words with frequency-counts output to CSV file:
-```python index.py --input=small_test.txt --start=foo --stop=bar --finish=enough --output=deleteme.csv -s -c```
-
-# Merge
-1. cd into the directory
-2. ```python
-    python merge.py \
-        --inputs=<filename> \
-        <optional: "--input" in place of "--inputs" for single-file transformation> \
-        --output=<filename> \
-        <optional: "-c" for outputting to csv>
-     ```
-
-## Examples of Merge
-To merge two files (listed separated by spaces in small_output_list.txt) and output to JSON:
-```python merge.py --inputs=test_output_list.txt --output=deleteme.json```
-
-To convert one file from JSON to CSV:
-```python merge.py --input=test_output_array.json --output=deleteme.csv -c```
+Read the count of all words (ordered by descending count) from the database:
+```python read.py```
 
 # Run Unit Tests
-```python -m unittest discover -p '*test*.py'```
+```python -m unittest discover -p "*_test.py"```

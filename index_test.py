@@ -1,12 +1,21 @@
 import unittest
+from os import remove
 from time import time
-from os import remove, path
 from index import getAndFilter, run
+from db import connect_db, close_db, empty_table
 
 file_name = 'temp_output_for_index_test.json'
 file_name_csv = 'temp_output_for_index_test.csv'
 
+db_name = 'test.sqlite'
+table_name = 'test'
+
 class IndexTest(unittest.TestCase):
+    def tearDown(self):
+        conn = connect_db(db_name, table_name)
+        empty_table(conn, table_name)
+        close_db(conn)
+        remove(db_name)
 
     def test_speed_with_moby(self):
         t0 = time()
@@ -41,58 +50,69 @@ class IndexTest(unittest.TestCase):
         ]
         self.assertEqual(getAndFilter(options), res)
 
+
     def test_index_run(self):
+        res = [('cow', 'cow', 0), ('cow', 'cow', 0), ('siamese', 'siamese', 0), ('wonderland', 'wonderland', 0), ('foo', 'foo', 0), ('toothpaste', 'toothpaste', 0), ('milky', 'milky', 0), ('flight-manual', 'flight-manual', 0), ('toothpick', 'toothpick', 0)]
         run([
             '',
             '--input=small_test.txt',
             '--start=foo',
             '--stop=bar',
             '--finish=007',
-            '-s',
-            f'--output={file_name}',
-        ])
-        res = '{\n    "cow": 2,\n    "siamese": 1,\n    "wonderland": 1,\n    "foo": 1,\n    "toothpaste": 1,\n    "milky": 1,\n    "flight-manual": 1,\n    "toothpick": 1\n}'
-        with open(file_name, 'r') as file:
-            contents = file.read()
-            self.assertEqual(res, contents)
-
-    def test_index_run_multi(self):
-        run([
-            '',
-            '--inputs=small_test_list.txt',
-            '--start=foo',
-            '--stop=bar',
-            '--finish=007',
-            '-s',
-            f'--output={file_name}',
-        ])
-        res = '{\n    "cow": 2,\n    "siamese": 1,\n    "wonderland": 1,\n    "foo": 1,\n    "toothpaste": 1,\n    "milky": 1,\n    "flight-manual": 1,\n    "toothpick": 1,\n    "cotton": 1,\n    "ceiling": 1,\n    "formaldehyde": 1\n}'
-        with open(file_name, 'r') as file:
-            contents = file.read()
-            self.assertEqual(res, contents)
-
-    def test_index_run_csv(self):
-        run([
-            '',
-            '--input=small_test.txt',
-            '--start=foo',
-            '--stop=bar',
-            '--finish=007',
-            '-s',
-            f'--output={file_name_csv}',
             '-c',
-        ])
-        res = 'Name,Count\ncow,2\nsiamese,1\nwonderland,1\nfoo,1\ntoothpaste,1\nmilky,1\nflight-manual,1\ntoothpick,1\n'
+        ], db_name, table_name)
+        conn = connect_db(db_name, table_name)
+        cur = conn.cursor()
+        cur.execute(f"SELECT word, word2, relation FROM {table_name}")
+        result = cur.fetchall()
+        close_db(conn)
+        self.assertEqual(result, res)
 
-        with open(file_name_csv, 'r') as file:
-            contents = file.read()
-            self.assertEqual(res, contents)
 
-    def tearDown(self):
-        if path.isfile(file_name):
-            remove(file_name)
-        if path.isfile(file_name_csv):
-            remove(file_name_csv)
+    def test_index_run_twice(self):
+        res = [
+            ('cow', 'cow', 0),
+            ('cow', 'cow', 0),
+            ('siamese', 'siamese', 0),
+            ('wonderland', 'wonderland', 0),
+            ('foo', 'foo', 0),
+            ('toothpaste', 'toothpaste', 0),
+            ('milky', 'milky', 0),
+            ('flight-manual', 'flight-manual', 0),
+            ('toothpick', 'toothpick', 0),
+            ('cow', 'cow', 0),
+            ('cow', 'cow', 0),
+            ('siamese', 'siamese', 0),
+            ('wonderland', 'wonderland', 0),
+            ('foo', 'foo', 0),
+            ('toothpaste', 'toothpaste', 0),
+            ('milky', 'milky', 0),
+            ('flight-manual', 'flight-manual', 0),
+            ('toothpick', 'toothpick', 0),
+        ]
+        run([
+            '',
+            '--input=small_test.txt',
+            '--start=foo',
+            '--stop=bar',
+            '--finish=007',
+        ], db_name, table_name)
+        # run a second time
+        run([
+            '',
+            '--input=small_test.txt',
+            '--start=foo',
+            '--stop=bar',
+            '--finish=007',
+        ], db_name, table_name)
+        conn = connect_db(db_name, table_name)
+        cur = conn.cursor()
+        cur.execute(f"SELECT word, word2, relation FROM {table_name}")
+        result = cur.fetchall()
+        close_db(conn)
+        self.assertEqual(result, res)
+
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,12 +1,9 @@
 import sys
-import json
 from getFile import getFile
 from filter import Filter
-from format import formatToLines
 from utils import dealArgs
-from writeFile import writeFile, writeCSV
-from getStats import getStats
-
+from getPairs import getPairs
+from db import connect_db, close_db, add_words, empty_table
 
 def getAndFilter(options):
     f = Filter(options)
@@ -15,53 +12,22 @@ def getAndFilter(options):
         rtn += getFile(file, f.filter)
     return rtn
 
-def run(args):
+def run(args, db_name='main.sqlite', table_name='main'):
+    rtn = ''
     options = dealArgs(args).to_object()
     words = getAndFilter(options)
-    stats = None
-
-    # if stats being requested
-    if options['stats']:
-        stats = getStats(words)
-    # format (incompatible with stats)
-    elif options['format']:
-        words = formatToLines(words)
-
-    # if outputting, just print JSON for one
-    if options['output']:
-        # CSV
-        if options['csv']:
-            columns = ['Name']
-            if stats:
-                columns = ['Name', 'Count']
-            writeCSV(stats, options['output'], columns)
-        # Not CSV
-        else:
-            if stats:
-                for_print = json.dumps(stats, indent=4)
-            else:
-                for_print = json.dumps(words, indent=4)
-            writeFile(for_print, options['output'])
-        print(f"\nThe requested data has been written to file {options['output']}.")
-    # if printing to screen
+    word_pairs = getPairs(words, True)
+    conn = connect_db(db_name, table_name)
+    if options['clear']:
+        removed_rows = empty_table(conn, table_name)
+        rtn += f'\nRemoved {removed_rows} rows.'
+    modified_rows = add_words(conn, word_pairs, table_name)
+    close_db(conn)
+    if modified_rows <= 0:
+        rtn += f'\nFailed to save anything'
     else:
-        for_print = '\n'
-        if stats:
-            if len(stats) <= 1:
-                for_print += 'No stats to print.'
-            else:
-                for_print += 'STATS:\n'
-                for stat in stats:
-                    for_print += f'\n{stat}: {stats[stat]}'
-        else:
-            if len(words) <= 1:
-                for_print += 'No words to print.'
-            else:
-                for_print += 'WORDS:\n'
-                for word in words:
-                    for_print += f'\n{word}'
-        print(for_print)
-
+        rtn += f'\nSuccessfully added {modified_rows} words'
+    return rtn
 
 if __name__ == '__main__':
-    run(sys.argv)
+    print(run(sys.argv))
